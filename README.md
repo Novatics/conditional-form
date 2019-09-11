@@ -8,7 +8,7 @@ are showed accordingly with the response of the previous ones.
 Calling the component:
 
 ### questions.js
-```
+```javascript
 export default = [
   questionNumber: 1,
   inputType: 'twoOptionsButtons',
@@ -41,7 +41,7 @@ export default = [
 ```
 
 ### hero-form.js
-```
+```javascript
 import React, { Component } from 'react'
 import ConditionalForm from 'conditional-form'
 import QUESTIONS from './question.js'
