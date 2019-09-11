@@ -3,6 +3,8 @@
 This package intent is to help developers to create forms that the inputs
 are showed accordingly with the response of the previous ones.
 
+---
+
 Calling the component:
 
 ### questions.js
@@ -76,18 +78,36 @@ class HeroForm extends React.Component {
 Each section with a text and input is a "question". Each question is defined
 by an object that contains all the main info for it.
 
+**Currently we're only supporting two types of questions:**
+- Two options buttons
+- Simple text input
+
 Each question attributes that you'll need to pass:
 
 ### Two options buttons
 ```
 {
-  questionNumber:
-  inputType:
-  inputClassNames:
-  questionText:
-  optionOneText:
-  optionTwoText:
-  descriptionTextClassNames:
-  descriptionText:
+  questionNumber: <Number>,
+  inputType: 'twoOptionsButtons',
+  inputClassNames: <String>,
+  questionText: <String>,
+  optionOneText: <String>,
+  optionTwoText: <String>,
+  descriptionTextClassNames: <String>,
+  descriptionText: <String>
 }
 ```  
+
+
+### Simple text input
+```
+{
+  questionNumber: <Number>,
+  type: 'text',
+  inputClassNames: <String>,
+  questionText: <String>,
+  placeholder: <String>
+}
+```  
+
+PS: The numbers passed in the `questionNumber` must be sequential
