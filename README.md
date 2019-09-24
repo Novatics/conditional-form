@@ -25,24 +25,26 @@ export default = [
       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       </span>
     ),
-    leftAwnserQuestions: {
-      questionNumber: 2,
-      type: 'text',
-      inputClassNames: 'optionsCssClass',
-      questionText: 'Why Spider-Man?',
-      questionTypeFields: {
-        placeholder: 'type here'
+    questions: [
+      {
+        questionNumber: 2,
+        type: 'text',
+        inputClassNames: 'optionsCssClass',
+        questionText: 'Why Spider-Man?',
+        questionTypeFields: {
+          placeholder: 'type here'
+        }
+      },
+      {
+        questionNumber: 3,
+        type: 'text',
+        inputClassNames: 'optionsCssClass',
+        questionText: 'Why Batman??',
+        questionTypeFields: {
+          placeholder: 'type here'
+        }
       }
-    },
-    rightAwnserQuestions: {
-      questionNumber: 3,
-      type: 'text',
-      inputClassNames: 'optionsCssClass',
-      questionText: 'Why Batman??',
-      questionTypeFields: {
-        placeholder: 'type here'
-      }
-    },
+    ],
   }
 ]
 ```
@@ -106,8 +108,7 @@ Each question attributes that you'll need to pass:
     optionTwoText: <String>,
     descriptionTextClassNames: <String>,
     descriptionText: <String>,
-    leftAwnserQuestions: <Question object>,
-    rightAwnserQuestions: <Question object>,
+    questions: <Array of Questions objects>
   }
 }
 ```
