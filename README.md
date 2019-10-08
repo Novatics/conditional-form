@@ -10,43 +10,43 @@ Calling the component:
 ### questions.js
 
 ```javascript
-export default = [
-  questionNumber: 1,
-  inputType: 'twoOptionsButtons',
-  inputClassNames: 'optionsCssClass',
-  questionText: 'Who is your favorite hero?',
-  questionTypeFields: {
-    optionOneText: 'Spider-Man',
-    optionTwoText: 'Batman',
-    descriptionTextClassNames: 'descroptionCssClass',
+export default {
+  number: 1,
+  type: "twoOptionsButtons",
+  ClassNames: "optionsCssClass",
+  text: "Who is your favorite hero?",
+  specificFields: {
+    optionOneText: "Spider-Man",
+    optionTwoText: "Batman",
+    descriptionTextClassNames: "descroptionCssClass",
     descriptionText: (
       <span>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
       </span>
     ),
     questions: [
       {
-        questionNumber: 2,
-        type: 'text',
-        inputClassNames: 'optionsCssClass',
-        questionText: 'Why Spider-Man?',
-        questionTypeFields: {
-          placeholder: 'type here'
+        number: 2,
+        type: "text",
+        classNames: "optionsCssClass",
+        text: "Why Spider-Man?",
+        specificFields: {
+          placeholder: "type here"
         }
       },
       {
-        questionNumber: 3,
-        type: 'text',
-        inputClassNames: 'optionsCssClass',
-        questionText: 'Why Batman??',
-        questionTypeFields: {
-          placeholder: 'type here'
+        number: 3,
+        type: "text",
+        classNames: "optionsCssClass",
+        text: "Why Batman??",
+        specificFields: {
+          placeholder: "type here"
         }
       }
-    ],
+    ]
   }
-]
+};
 ```
 
 ### hero-form.js
@@ -99,11 +99,11 @@ Each question attributes that you'll need to pass:
 
 ```
 {
-  questionNumber: <Number>,
+  number: <Number>,
   type: 'twoOptionsButtons',
-  inputClassNames: <String>,
-  questionText: <String>,
-  questionTypeFields: {
+  classNames: <String>,
+  text: <String>,
+  specificFields: {
     optionOneText: <String>,
     optionTwoText: <String>,
     descriptionTextClassNames: <String>,
@@ -117,14 +117,14 @@ Each question attributes that you'll need to pass:
 
 ```
 {
-  questionNumber: <Number>,
+  number: <Number>,
   type: 'text',
-  inputClassNames: <String>,
-  questionText: <String>,
-  questionTypeFields: {
+  classNames: <String>,
+  text: <String>,
+  specificFields: {
     placeholder: <String>
   }
 }
 ```
 
-PS: The numbers passed in the `questionNumber` must be sequential
+PS: The numbers assigned to `number` must be sequential
